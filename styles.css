@@ -1,3 +1,17 @@
+@font-face {
+    font-family: Boyfrend;
+    src: url(fonts/Boyfrend.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(fonts/Roboto.ttf);
+}
+
+@font-face {
+    font-family: American;
+    src: url(fonts/American.ttf);
+}
 
 html {
     padding: 0px;
@@ -11,9 +25,42 @@ body {
     overflow-y: hidden;
     overflow-x: hidden;
     color: rgb(255, 255, 255);
+    font-family: Roboto;
+}
+
+.mg-font {
+    font-family: Boyfrend;
+    color: #FF9A00;
+    text-shadow: 1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000, -3px 3px #ffffff, -4px 4px #000000, -4px 2px #000000;
+    /*text-shadow: -2px 2px #414141;*/
+    /*text-shadow: -2px 2px #FF9A00;*/
+    /*text-align: center;*/
+    margin: 5px;
+    margin-top: 10px;
+}
+
+.font-size-xl {
+    font-size: 64px;
+}
+
+.font-size-lg {
+    font-size: 48px;
+}
+
+.font-size-md {
+    font-size: 32px;
+}
+
+.font-size-sm {
+    font-size: 24px;
+}
+
+.font-size-xs {
+    font-size: 16px;
 }
 
 .index-main-menu {
+    font-size: 24px;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -21,8 +68,9 @@ body {
     top: 0px;
     bottom: 0px;
     padding: 50px;
-    padding-right: 150px;
-    background: linear-gradient(90deg, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%);
+    padding-right: 50px;
+    background: linear-gradient(90deg, rgb(0, 0, 0) 95%, rgba(255, 255, 255, 0) 100%);
+    /*background-color: rgb(0, 0, 0);*/
 }
 
 .game-container {
@@ -32,34 +80,33 @@ body {
     right: -50px;
     left: 500px;
     /*background: radial-gradient(circle, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);*/
-    background-color: rgba(0, 0, 0, 0.45);
+    background-color: rgba(255, 255, 255, 0.0);
     padding: 50px;
     padding-right: 200px;
     border-radius: 50px;
 }
 
 .game-showing {
-    top: 25%;
-    bottom: 25%;
-    transition: all 1s;
+    top: 2%;
+    bottom: 2%;
+    transition: all 0.8s;
+    transition-delay: 0.4s;
 }
 
-@starting-style {
-    .game-showing {
-        top: -175%;
-        bottom: 125%;
-        transition: all 1;
-    }
+.game-hidden {
+    top: -75%;
+    bottom: 125%;
+    transition: all 0.8s;
 }
 
 .game-store-links {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: left;
 }
 
 .game-container > h2 {
-    font-size: 96px;
+    font-size: 144px;
     align-self: flex-end;
     margin: 0px;
     margin-right: -75px;
@@ -74,6 +121,26 @@ body {
     flex-direction: column;
 }
 
+.main-menu-projects > p {
+    margin: 6px;
+    margin-left: 32px;
+}
+
+
+.main-menu-projects-hidden {
+    height: 0px;
+    transition: height 1s;
+}
+
+.main-menu-projects-show {
+    height: auto;
+    transition: height 1s;
+}
+
+.index-main-menu > p {
+    margin: 6px;
+}
+
 .background-video {
     position: absolute;
     top: -5%;
@@ -83,4 +150,61 @@ body {
 
 .auto-margin {
     flex-grow: 1;
+}
+
+.collapsed {
+    visibility: collapse;
+}
+
+.platform-name {
+    text-align: center;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    margin: 0px;
+    flex-grow: 1;
+    align-self: center;
+}
+
+.platform-icon {
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    margin-right: 5px;
+}
+
+.itchio-background {
+    background: linear-gradient(135deg, rgba(205,65,65,1) 0%, rgba(131,17,17,1) 100%);
+}
+
+.steam-background {
+    background: linear-gradient(135deg, rgba(0,97,180,1) 0%, rgba(0,39,59,1) 100%);
+}
+
+.googleplay-background {
+    background: linear-gradient(135deg, rgb(63, 123, 17) 0%,rgb(33, 86, 0) 100%);
+}
+
+.store-btn {
+    border-radius: 15px;
+    width: 225px;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.dark-bg {
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: -1;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
 }
