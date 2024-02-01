@@ -30,8 +30,8 @@ body {
 
 .mg-font {
     font-family: Boyfrend;
-    color: #FF9A00;
-    text-shadow: 1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000, -3px 3px #ffffff, -4px 4px #000000, -4px 2px #000000;
+    color: #FFFFFF;
+    text-shadow: 1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000, -3px 3px #FF9A00, -4px 4px #000000, -4px 2px #000000;
     /*text-shadow: -2px 2px #414141;*/
     /*text-shadow: -2px 2px #FF9A00;*/
     /*text-align: center;*/
@@ -60,7 +60,6 @@ body {
 }
 
 .index-main-menu {
-    font-size: 24px;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -71,6 +70,22 @@ body {
     padding-right: 50px;
     background: linear-gradient(90deg, rgb(0, 0, 0) 95%, rgba(255, 255, 255, 0) 100%);
     /*background-color: rgb(0, 0, 0);*/
+}
+
+.index-main-menu-link {
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    background-color: #ffffff00;
+    border-radius: 15px;
+    transition: all 1s;
+}
+
+.index-main-menu-link:hover {
+    padding: 10px;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    background-color: #FF9A00;
+    transition: all 1s;
 }
 
 .game-container {
@@ -94,8 +109,8 @@ body {
 }
 
 .game-hidden {
-    top: -75%;
-    bottom: 125%;
+    top: -175%;
+    bottom: 225%;
     transition: all 0.8s;
 }
 
@@ -114,6 +129,8 @@ body {
 
 .game-container > p {
     font-size: 24px;
+    white-space: pre-line;
+    text-justify: inter-word;
 }
 
 .main-menu-projects {
@@ -121,11 +138,18 @@ body {
     flex-direction: column;
 }
 
-.main-menu-projects > p {
+.main-menu-project-uncollapsed {
     margin: 6px;
-    margin-left: 32px;
+    margin-left: 48px;
+    font-size: 24px;
+    transition: all 1s;
 }
 
+.main-menu-project-collapsed {
+    margin: 0px;
+    font-size: 0px;
+    transition: all 1s;
+}
 
 .main-menu-projects-hidden {
     height: 0px;
@@ -144,7 +168,7 @@ body {
 .background-video {
     position: absolute;
     top: -5%;
-    object-fit: cover;
+    width: 100%;
     z-index: -1;
 }
 
@@ -152,8 +176,16 @@ body {
     flex-grow: 1;
 }
 
+.uncollapsed {
+    /*visibility: collapse;*/
+    font-size: 24px;
+    transition: all 1s;
+}
+
 .collapsed {
-    visibility: collapse;
+    /*visibility: collapse;*/
+    font-size: 0px;
+    transition: all 1s;
 }
 
 .platform-name {
@@ -200,11 +232,75 @@ body {
 }
 
 .dark-bg {
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: -1;
     position: absolute;
     left: 0px;
     right: 0px;
     top: 0px;
     bottom: 0px;
+    transition: all 0.5s;
+}
+
+.black-bg {
+    background-color: rgb(0, 0, 0);
+    z-index: -1;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    transition: all 0.5s;
+}
+
+.team-full-info {
+    position: absolute;
+    left: 25%;
+    top: 2%;
+    bottom: 2%;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.team-members {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.team-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.team-member {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    min-width: 500px;
+}
+
+.team-member-image {
+    height: 25vh;
+}
+
+.team-member-name {
+    font-size: 42px;
+    margin: 0px;
+    margin-left: 10px;
+}
+
+.team-member-roles {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.team-member-role {
+    font-size: 16px;
+    margin: 0px;
+    padding: 0px;
 }

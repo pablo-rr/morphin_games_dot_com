@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Morphin' Games</title>
+
+        <link href="../styles.css" rel="stylesheet" type="text/css">
+        <script src="../scripts/team.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <!--Menu-->
+        <div class="index-main-menu">
+            <h1 class="mg-font font-size-lg">Morphin' Games</h1>
+            <p id="projects-dropdown" class="index-main-menu-link clickable" onclick="projectsClicked()">Projects</p>
+            <div id="main-menu-projects" class="main-menu-projects">
+                <p class="main-menu-project-collapsed index-main-menu-link clickable" onclick="window.open('index.html#scale_tale', '_self')">Scale Tale</p>
+                <p class="main-menu-project-collapsed index-main-menu-link clickable" onclick="window.open('index.html#glass_jungle', '_self')">Glass Jungle</p>
+                <p class="main-menu-project-collapsed index-main-menu-link clickable" onclick="window.open('index.html#nightmare_run', '_self')">Nightmare Run</p>
+            </div>
+            <p class="index-main-menu-link clickable">Who are we</p>
+            <p onclick="window.open('contact.html', '_self')" class="index-main-menu-link clickable">Contact</p>
+        </div>
+
+        <!--Background video with current game displaying-->
+        <video id="background-video" class="background-video" autoplay muted loop>
+            <source id="video-source" src="../videos/office_placeholder.mp4" type="video/mp4">
+        </video>
+        
+        <!--Dark div-->
+        <div id="dark-screen" class="dark-bg"></div>
+
+        <div class="team-full-info">
+            <div class="morphin-story">
+                <h2 class="mg-font font-size-xl">Self made developers</h2>
+                <p class="font-size-sm">Morphin' Games was originally founded the 1st of November of 2022 as a project of three video game development students, but as time passes, the team is growing in both members and expertise.</p>
+            </div>
+
+            <p class="font-size-lg">Meet the team:</p>
+            <div class="team-members">
+                <div class="team-row">
+                    <div class="team-member">
+                        <img class="team-member-image" src="../images/members/placeholder.jpg">
+                        <div class="team-member-info">
+                            <p class="team-member-name mg-font">Ricardo Monforte</p>
+                            <div class="team-member-roles font-size-xs">
+                                <p class="team-member-role">Founder</p>
+                                <p class="team-member-role">Lead 3D Artist</p>
+                                <p class="team-member-role">Game Producer</p>
+                                <p class="team-member-role">Game Designer</p>
+                                <p class="team-member-role">Level Designer</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <img class="team-member-image" src="../images/members/placeholder.jpg">
+                        <div class="team-member-info">
+                            <p class="team-member-name mg-font">Pablo Romero</p>
+                            <div class="team-member-roles font-size-xs">
+                                <p class="team-member-role">Founder</p>
+                                <p class="team-member-role">Lead Programmer</p>
+                                <p class="team-member-role">Game Producer</p>
+                                <p class="team-member-role">Game Designer</p>
+                                <p class="team-member-role">Level Designer</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <img class="team-member-image" src="../images/members/placeholder.jpg">
+                        <div class="team-member-info">
+                            <p class="team-member-name mg-font">Hristian Petkov</p>
+                            <div class="team-member-roles">
+                                <p class="team-member-role">Founder</p>
+                                <p class="team-member-role">Lead 3D Artist</p>
+                                <p class="team-member-role">Game Producer</p>
+                                <p class="team-member-role">Game Designer</p>
+                                <p class="team-member-role">Level Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-row">
+                    <div class="team-member">
+                        <img class="team-member-image" src="../images/members/placeholder.jpg">
+                        <div class="team-member-info">
+                            <p class="team-member-name mg-font">Selene Gonzalo</p>
+                            <div class="team-member-roles font-size-xs">
+                                <p class="team-member-role">Quality Assurance</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <img class="team-member-image" src="../images/members/placeholder.jpg">
+                        <div class="team-member-info">
+                            <p class="team-member-name mg-font">Saul España</p>
+                            <div class="team-member-roles font-size-xs">
+                                <p class="team-member-role">Lead Music Composer</p>
+                                <p class="team-member-role">Lead SFX Designer</p>
+                                <p class="team-member-role">Programmer</p>
+                                <p class="team-member-role">Game Designer</p>
+                                <p class="team-member-role">Level Designer</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <img class="team-member-image" src="../images/members/placeholder.jpg">
+                        <div class="team-member-info">
+                            <p class="team-member-name mg-font">Hector Lasanta</p>
+                            <div class="team-member-roles">
+                                <p class="team-member-role">Lead Writter</p>
+                                <p class="team-member-role">Quality Assurance</p>
+                                <p class="team-member-role">Game Designer</p>
+                                <p class="team-member-role">Level Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-row">
+                    <div class="team-member">
+                        <img class="team-member-image" src="../images/members/placeholder.jpg">
+                        <div class="team-member-info">
+                            <p class="team-member-name mg-font">Jorge Martinez</p>
+                            <div class="team-member-roles font-size-xs">
+                                <p class="team-member-role">3D Artist</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <img class="team-member-image" src="../images/members/placeholder.jpg">
+                        <div class="team-member-info">
+                            <p class="team-member-name mg-font">Alex Rubio</p>
+                            <div class="team-member-roles font-size-xs">
+                                <p class="team-member-role">Lead Conceptual Artist</p>
+                                <p class="team-member-role">Lead 2D Designer</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <img class="team-member-image" src="../images/members/placeholder.jpg">
+                        <div class="team-member-info">
+                            <p class="team-member-name mg-font">Elna Maspoch</p>
+                            <div class="team-member-roles">
+                                <p class="team-member-role">Conceptual Artist</p>
+                                <p class="team-member-role">2D Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
