@@ -4,7 +4,7 @@
         <title>Morphin' Games</title>
 
         <link href="../styles.css" rel="stylesheet" type="text/css">
-        <script src="../scripts/team.js" type="text/javascript"></script>
+        <script src="../scripts/controller.js" type="text/javascript"></script>
     </head>
 
     <body>
@@ -13,12 +13,23 @@
             <h1 class="mg-font font-size-lg">Morphin' Games</h1>
             <p id="projects-dropdown" class="index-main-menu-link clickable" onclick="projectsClicked()">Projects</p>
             <div id="main-menu-projects" class="main-menu-projects">
-                <p class="main-menu-project-collapsed index-main-menu-link clickable" onclick="window.open('index.html#scale_tale', '_self')">Scale Tale</p>
-                <p class="main-menu-project-collapsed index-main-menu-link clickable" onclick="window.open('index.html#glass_jungle', '_self')">Glass Jungle</p>
-                <p class="main-menu-project-collapsed index-main-menu-link clickable" onclick="window.open('index.html#nightmare_run', '_self')">Nightmare Run</p>
+                <p class="main-menu-project-collapsed index-main-menu-link clickable" onclick="projectClicked('scale-tale')">Scale Tale</p>
+                <p class="main-menu-project-collapsed index-main-menu-link clickable" onclick="projectClicked('robo-crack')">ROBO-CRACK</p>
+                <p class="main-menu-project-collapsed index-main-menu-link clickable" onclick="projectClicked('glass-jungle')">Glass Jungle</p>
+                <p class="main-menu-project-collapsed index-main-menu-link clickable" onclick="projectClicked('nightmare-run')">Nightmare Run</p>
             </div>
-            <p class="index-main-menu-link clickable">Who are we</p>
+            <p onclick="window.open('team.html', '_self')" class="index-main-menu-link clickable">Who we are</p>
             <p onclick="window.open('contact.html', '_self')" class="index-main-menu-link clickable">Contact</p>
+            <div class="auto-margin"></div>
+            <div class="social-media-items">
+                <img onclick="window.open('https://www.youtube.com/@morphin_games', '_blank')" class="clickable social-media-icon" src="../images/social_media/youtube.png">
+                <img onclick="window.open('https://twitter.com/gamesmorphin', '_blank')" class="clickable social-media-icon" src="../images/social_media/x.png">
+                <img onclick="window.open('https://www.tiktok.com/@morphin.games', '_blank')" class="clickable social-media-icon" src="../images/social_media/tiktokv2.png">
+                <img onclick="window.open('https://www.instagram.com/morphin_games/?igshid=MzRlODBiNWFlZA%3D%3D', '_blank')" class="clickable social-media-icon" src="../images/social_media/instagram.png">
+            </div>
+            <div class="credits">
+                Morphin' Games © - All rights reserved
+            </div>
         </div>
 
         <!--Background video with current game displaying-->
@@ -32,12 +43,12 @@
         <div class="team-full-info">
             <div class="morphin-story">
                 <h2 class="mg-font font-size-xl">Self made developers</h2>
-                <p class="font-size-sm">Morphin' Games was originally founded the 1st of November of 2022 as a project of three video game development students, but as time passes, the team is growing in both members and expertise.</p>
+                <p class="font-size-sm">Morphin' Games was originally founded the 1st of November of 2022 as a project of three video game development students, but as time passes, the team grows both in members and experience.</p>
             </div>
 
             <p class="font-size-lg">Meet the team:</p>
             <div class="team-members">
-                <div class="team-row">
+                <div class="team-col">
                     <div class="team-member">
                         <img class="team-member-image" src="../images/members/placeholder.jpg">
                         <div class="team-member-info">
@@ -81,7 +92,7 @@
                     </div>
                 </div>
 
-                <div class="team-row">
+                <div class="team-col">
                     <div class="team-member">
                         <img class="team-member-image" src="../images/members/placeholder.jpg">
                         <div class="team-member-info">
@@ -120,7 +131,7 @@
                     </div>
                 </div>
 
-                <div class="team-row">
+                <div class="team-col">
                     <div class="team-member">
                         <img class="team-member-image" src="../images/members/placeholder.jpg">
                         <div class="team-member-info">

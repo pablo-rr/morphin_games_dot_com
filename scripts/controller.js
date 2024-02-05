@@ -1,35 +1,34 @@
 let gameSwitchingLocked = false;
 let activeProject = 0;
-let projects = ["scale-tale", "nightmare-run", "glass-jungle"];
+let projects = ["scale-tale", "nightmare-run", "glass-jungle", "robo-crack"];
+let inIndex;
 
 function projectClicked(project) {
     if(gameSwitchingLocked) { return; }
-    for(let i = 0; i < projects.length; i++){
-        if(projects[i] == project && activeProject != i) {
-            gameSwitchingLocked = true;
-            document.getElementById("dark-screen").classList.toggle("dark-bg");
-            document.getElementById("dark-screen").classList.toggle("black-bg");
-            document.getElementById(projects[activeProject]).classList.toggle("game-showing");
-            document.getElementById(projects[activeProject]).classList.toggle("game-hidden");
-            document.getElementById(project).classList.toggle("game-showing");
-            document.getElementById(project).classList.toggle("game-hidden");
-            activeProject = projects.indexOf(project);
-            return;
+
+    
+
+    if(inIndex) {
+        for(let i = 0; i < projects.length; i++){
+            if(projects[i] == project && activeProject != i) {
+                gameSwitchingLocked = true;
+                document.getElementById("dark-screen").classList.toggle("dark-bg");
+                document.getElementById("dark-screen").classList.toggle("black-bg");
+                document.getElementById(projects[activeProject]).classList.toggle("game-showing");
+                document.getElementById(projects[activeProject]).classList.toggle("game-hidden");
+                document.getElementById(project).classList.toggle("game-showing");
+                document.getElementById(project).classList.toggle("game-hidden");
+                activeProject = projects.indexOf(project);
+                return;
+            }
         }
+    } else {
+
+        window.open("index.html#" + project.replace("-", "_"), "_self");
     }
 }
 
 function projectsClicked() {
-    /*
-    let ddown = document.getElementById("projects-dropdown").textContent.split(" ");
-    console.log(ddown);
-    if(ddown[1] == "➕"){
-        document.getElementById("projects-dropdown").textContent = ddown[0] + " ➖";
-    } else {
-        document.getElementById("projects-dropdown").textContent = ddown[0] + " ➕";
-    }
-    */
-
     for(let i = 0; i < document.getElementById("main-menu-projects").children.length; i++){
         document.getElementById("main-menu-projects").children[i].classList.toggle("main-menu-project-uncollapsed")
         document.getElementById("main-menu-projects").children[i].classList.toggle("main-menu-project-collapsed")
@@ -37,13 +36,19 @@ function projectsClicked() {
 }
 
 window.onload = () => {
+    let split = window.location.href.split("/");
+    let href = split[split.length - 1];
+    inIndex = href.split(".")[0] == "index";
+
+    if(!inIndex) { return; }
+
     if(window.location.href.split("#").length > 1){
         let projectTarget = window.location.href.split("#")[1].replace("_", "-");
         projectClicked(projectTarget);
     }
 
     addEventListener("wheel", (ev) => {
-        if(gameSwitchingLocked) { return; }
+        if(gameSwitchingLocked || !inIndex) { return; }
 
         gameSwitchingLocked = true;
         document.getElementById(projects[activeProject]).classList.toggle("game-showing");
@@ -69,6 +74,8 @@ window.onload = () => {
     });
 
     addEventListener("transitionend", (ev) => {
+        if(!inIndex) { return; }
+
         if(ev.target.classList.contains("game-showing")){
             gameSwitchingLocked = false;
         } else if(ev.target.classList.contains("black-bg")){
