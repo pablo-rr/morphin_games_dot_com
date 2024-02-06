@@ -17,8 +17,10 @@ function projectClicked(project) {
                 document.getElementById(project).classList.toggle("game-showing");
                 document.getElementById(project).classList.toggle("game-hidden");
                 activeProject = projects.indexOf(project);
-                closeMenu();
-                projectsClicked();
+                if(screen.width <= 1024){
+                    closeMenu();
+                    projectsClicked();
+                }
                 return;
             }
         }
