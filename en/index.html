@@ -18,9 +18,16 @@
     </head>
 
     <body>
+        <!--Mobile sandwich menu-->
+        <div id="sandwich-container" class="sandwich-container">
+            <img onclick="nextProject()" class="sandwich-button clickable" src="../images/arrow_left.png">
+            <img onclick="openMenu()" class="sandwich-button clickable" src="../images/sandwich.png">
+            <img onclick="previousProject()" class="sandwich-button clickable" src="../images/right_arrow.png">
+        </div>
+
         <!--Menu-->
-        <div class="index-main-menu">
-            <h1 class="mg-font font-size-lg">Morphin' Games</h1>
+        <div id="index-main-menu" class="index-main-menu">
+            <h1 class="mg-title mg-font font-size-lg">Morphin' Games</h1>
             <p id="projects-dropdown" class="index-main-menu-link clickable" onclick="projectsClicked()">Projects</p>
             <div id="main-menu-projects" class="main-menu-projects">
                 <p class="main-menu-project-collapsed index-main-menu-link clickable" onclick="projectClicked('scale-tale')">Scale Tale</p>
@@ -28,8 +35,9 @@
                 <p class="main-menu-project-collapsed index-main-menu-link clickable" onclick="projectClicked('glass-jungle')">Glass Jungle</p>
                 <p class="main-menu-project-collapsed index-main-menu-link clickable" onclick="projectClicked('nightmare-run')">Nightmare Run</p>
             </div>
-            <p onclick="window.open('team.html', '_self')" class="index-main-menu-link clickable">Who we are</p>
-            <p onclick="window.open('contact.html', '_self')" class="index-main-menu-link clickable">Contact</p>
+            <p onclick="window.open('team', '_self')" class="index-main-menu-link clickable">Who we are</p>
+            <p onclick="window.open('contact', '_self')" class="index-main-menu-link clickable">Contact</p>
+            <p onclick="closeMenu()" class="index-main-menu-link clickable hidden-on-pc">X</p>
             <div class="auto-margin"></div>
             <div class="social-media-items">
                 <img onclick="window.open('https://www.youtube.com/@morphin_games', '_blank')" class="clickable social-media-icon" src="../images/social_media/youtube.png">
@@ -43,15 +51,20 @@
         </div>
 
         <!--Background video with current game displaying-->
-        <video id="background-video" class="background-video" autoplay muted loop>
-            <source id="video-source" src="../videos/scale-tale.mp4" type="video/mp4">
-        </video>
+        <div class="video-center">
+            <video id="background-video" class="background-video" autoplay muted loop>
+                <source id="video-source" src="../videos/scale-tale.mp4" type="video/mp4">
+            </video>
+        </div>
         
         <!--Dark div-->
         <div id="dark-screen" class="dark-bg"></div>
 
         <!--Games-->
         <div id="games">
+            <!-- #############################################################################################  -->
+            <!-- ################################################################################### GAME -->
+            <!-- #############################################################################################  -->
             <div id="scale-tale" class="game-container game-showing">
                 <h2 class="mg-font">Scale Tale</h2>
                 <p>Gecko Elders proudly tell of their descent from Dragons, but fewer and fewer people believe these stories, including Endal.
@@ -76,11 +89,14 @@
                 </div>
             </div>
 
+            <!-- #############################################################################################  -->
+            <!-- ################################################################################### GAME -->
+            <!-- #############################################################################################  -->
             <div id="robo-crack" class="game-container game-hidden">
                 <h2 class="mg-font">ROBO-CRACK</h2>
-                <p>Testings
+                <p>A long time ago, he was deactivated. Now, he's come back, and he will do anything to recharge his batteries.
 
-
+                    Play as ROBO-CRACK, an energy-addict robot that has to fight his way out of a factory to be finally free!
                 </p>
                 <div class="auto-margin"></div>
                 <p>Get it now:</p>
@@ -92,6 +108,9 @@
                 </div>
             </div>
 
+            <!-- #############################################################################################  -->
+            <!-- ################################################################################### GAME -->
+            <!-- #############################################################################################  -->
             <div id="glass-jungle" class="game-container game-hidden">
                 <h2 class="mg-font">Glass Jungle</h2>
                 <p>Welcome to Hollywood, where the main character has unlimited ammo and an evil guy wants to take over the world!
@@ -108,6 +127,9 @@
                 </div>
             </div>
 
+            <!-- #############################################################################################  -->
+            <!-- ################################################################################### GAME -->
+            <!-- #############################################################################################  -->
             <div id="nightmare-run" class="game-container game-hidden">
                 <h2 class="mg-font">Nightmare Run</h2>
                 <p>In a creepy cementery, a living rag doll is running for its life!

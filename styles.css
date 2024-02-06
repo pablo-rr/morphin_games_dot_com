@@ -36,6 +36,24 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    padding: 0px;
+    margin: 0px;
+    color: #ffbfa1;
+    font-family: Roboto;
+    text-decoration: none;
+}
+
+.mg-title {
+    text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+    .mg-title {
+        text-align: center;
+    }
+}
+
 .mg-font {
     font-family: Boyfrend;
     color: #FFFFFF;
@@ -47,45 +65,124 @@ a {
     margin-top: 10px;
 }
 
+.sandwich-container {
+    visibility: visible;
+    position: absolute;
+    margin-top: 12px;
+    left: 0px;
+    right: 0px;
+    justify-content: space-around;
+    display: flex;
+    transition: all 1s;
+}
+
+.sandwich-button {
+    width: 48px;
+}
+
+@media screen and (min-width: 1024px) {
+    .sandwich-button {
+        visibility: collapse;
+    }
+}
+
 .font-size-xl {
     font-size: 64px;
 }
 
-.font-size-lg {
-    font-size: 48px;
+.font-size-xlg {
+    font-size: 36px;
 }
 
-.font-size-md {
+.font-size-lg {
     font-size: 32px;
 }
 
-.font-size-sm {
+.font-size-md {
     font-size: 24px;
+}
+
+.font-size-sm {
+    font-size: 20px;
 }
 
 .font-size-xs {
     font-size: 16px;
 }
 
+@media screen and (min-width: 1024px) {
+    .font-size-xl {
+        font-size: 64px;
+    }
+    
+    .font-size-xlg {
+        font-size: 56px;
+    }
+    
+    .font-size-lg {
+        font-size: 48px;
+    }
+    
+    .font-size-md {
+        font-size: 32px;
+    }
+    
+    .font-size-sm {
+        font-size: 24px;
+    }
+    
+    .font-size-xs {
+        font-size: 16px;
+    }
+}
+
 .index-main-menu {
     position: absolute;
     display: flex;
     flex-direction: column;
-    left: 0px;
+    left: -100%;
+    right: 100%;
     top: 0px;
     bottom: 0px;
-    padding: 50px;
-    padding-right: 50px;
-    background: linear-gradient(90deg, rgb(0, 0, 0) 95%, rgba(255, 255, 255, 0) 100%);
-    /*background-color: rgb(0, 0, 0);*/
+    z-index: 100;
+    background-color: rgb(0, 0, 0);
+    transition: all 1s;
 }
+
+@media screen and (min-width: 1024px) {
+    .index-main-menu {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        left: 0px;
+        top: 0px;
+        bottom: 0px;
+        right: auto;
+        padding: 50px;
+        padding-right: 50px;
+        background: linear-gradient(90deg, rgb(0, 0, 0) 95%, rgba(255, 255, 255, 0) 100%);
+    }
+}
+  
 
 .index-main-menu-link {
     font-size: 24px;
     color: rgb(255, 255, 255);
     background-color: #ffffff00;
     border-radius: 15px;
+    text-align: center;
     transition: all 1s;
+}
+
+@media screen and (min-width: 1024px) {
+    .index-main-menu-link {
+        font-size: 24px;
+        color: rgb(255, 255, 255);
+        background-color: #ffffff00;
+        border-radius: 15px;
+        text-align: left;
+        transition: all 1s;
+    }
 }
 
 .index-main-menu-link:hover {
@@ -100,13 +197,27 @@ a {
     position: absolute;
     display: flex;
     flex-direction: column;
-    right: -50px;
-    left: 500px;
+    margin-top: 64px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
     /*background: radial-gradient(circle, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);*/
     background-color: rgba(255, 255, 255, 0.0);
-    padding: 50px;
-    padding-right: 200px;
-    border-radius: 50px;
+    overflow-y: auto;
+}
+
+@media screen and (min-width: 1024px) {
+    .game-container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        right: -50px;
+        left: 500px;
+        /*background: radial-gradient(circle, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);*/
+        background-color: rgba(255, 255, 255, 0.0);
+        padding: 50px;
+        padding-right: 200px;
+    }
 }
 
 .game-showing {
@@ -124,33 +235,90 @@ a {
 
 .game-store-links {
     display: flex;
-    flex-direction: row;
-    justify-content: left;
+    flex-direction: column;
+    justify-content: bottom;
+}
+
+@media screen and (min-width: 1024px) {
+    .game-store-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+    }
 }
 
 .game-container > h2 {
-    font-size: 144px;
-    align-self: flex-end;
-    margin: 0px;
-    margin-right: -75px;
+    text-align: center;
+    font-size: 72px;
+    align-self: center;
+    margin: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+    .game-container > h2 {
+        font-size: 7vw;
+        align-self: flex-end;
+        margin: 0px;
+        margin-right: -75px;
+    }
 }
 
 .game-container > p {
-    font-size: 24px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
     white-space: pre-line;
     text-justify: inter-word;
+}
+
+@media screen and (min-width: 1024px){
+    .game-container > p {
+        font-size: 1.2vw;
+        white-space: pre-line;
+        text-justify: inter-word;
+    }
+}
+
+.main-menu-projects-separator {
+    margin-bottom: 36px;
+    transition: all 0.8s;
+}
+
+@media screen and (min-width: 1024px){
+    .main-menu-projects-separator {
+        margin-bottom: 0px;
+        transition: all 0.8s;
+    }
 }
 
 .main-menu-projects {
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (min-width: 1024px){
+    .main-menu-projects {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .main-menu-project-uncollapsed {
-    margin: 6px;
-    margin-left: 48px;
-    font-size: 24px;
+    margin: 2px;
+    margin-bottom: 4px;
+    font-size: 18px;
     transition: all 1s;
+}
+
+@media screen and (min-width: 1024px){
+    .main-menu-project-uncollapsed {
+        margin: 6px;
+        margin-left: 48px;
+        font-size: 24px;
+        transition: all 1s;
+    }
 }
 
 .main-menu-project-collapsed {
@@ -175,9 +343,25 @@ a {
 
 .background-video {
     position: absolute;
-    top: -5%;
-    width: 100%;
+    height: 110%;
     z-index: -1;
+}
+
+.video-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+@media screen and (min-width: 1024px) {
+    .background-video {
+        position: absolute;
+        top: -5%;
+        width: 100%;
+        z-index: -1;
+    }
 }
 
 .auto-margin {
@@ -206,10 +390,19 @@ a {
 }
 
 .platform-icon {
-    width: 60px;
-    height: 60px;
+    width: 32px;
+    height: 32px;
     margin: auto;
     margin-right: 5px;
+}
+
+@media screen and (min-width: 1024px) {
+    .platform-icon {
+        width: 60px;
+        height: 60px;
+        margin: auto;
+        margin-right: 5px;
+    }
 }
 
 .itchio-background {
@@ -225,14 +418,28 @@ a {
 }
 
 .store-btn {
-    border-radius: 15px;
-    width: 225px;
-    height: 75px;
+    border-radius: 10px;
+    width: auto;
+    height: 50px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: 6px;
     margin-left: 15px;
     margin-right: 15px;
+}
+
+@media screen and (min-width: 1024px) {
+    .store-btn {
+        border-radius: 15px;
+        width: 225px;
+        height: 75px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 }
 
 .clickable {
@@ -263,19 +470,44 @@ a {
 
 .team-full-info {
     position: absolute;
-    left: 25%;
-    top: 2%;
-    bottom: 2%;
-    right: 5%;
+    margin-top: 64px;
+    margin-left: 10px;
+    margin-right: 10px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
     display: flex;
     flex-direction: column;
 }
 
+@media screen and (min-width: 1024px) {
+    .team-full-info {
+        position: absolute;
+        left: 25%;
+        top: 2%;
+        bottom: 2%;
+        right: 5%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .team-members {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-grow: 1;
     overflow-y: auto;
+    align-items: flex-start;
+}
+
+@media screen and (min-width: 1024px) {
+    .team-members {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        overflow-y: auto;
+    }
 }
 
 .team-row {
@@ -283,9 +515,23 @@ a {
     flex-direction: row;
 }
 
+@media screen and (min-width: 1024px) {
+    .team-row {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .team-col {
     display: flex;
     flex-direction: column;
+}
+
+@media screen and (min-width: 1024px) {
+    .team-row {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .team-member {
@@ -297,6 +543,7 @@ a {
 
 .team-member-image {
     height: 25vh;
+    margin-right: 5px;
 }
 
 .team-member-name {
@@ -329,6 +576,25 @@ a {
     justify-content: space-around;
 }
 
+.social-media-items-bg {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    width: 100%;
+    justify-content: center;
+    row-gap: 20px;
+    column-gap: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 1024px) {
+    .social-media-bg {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
 .social-media-icon {
     width: 32px;
     height: 32px;
@@ -343,9 +609,17 @@ a {
 }
 
 .social-media-icon-bg {
-    width: 256px;
-    height: 256px;
+    width: 200px;
+    height: 200px;
     transition: all 0.5s;
+}
+
+@media screen and (min-width: 1024px) {
+    .social-media-icon-bg {
+        width: 256px;
+        height: 256px;
+        transition: all 0.5s;
+    }
 }
 
 .social-media-icon-bg:hover {
@@ -361,14 +635,51 @@ a {
     align-items: center;
     align-self: center;
     margin-top: 35px;
+    margin-bottom: 20px;
 }
 
 .contact-info {
     position: absolute;
-    left: 25%;
-    top: 2%;
-    bottom: 2%;
-    right: 5%;
+    margin-top: 64px;
+    margin-left: 10px;
+    margin-right: 10px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
     display: flex;
     flex-direction: column;
 }
+
+@media screen and (min-width: 1024px) {
+    .contact-info {
+        position: absolute;
+        left: 25%;
+        top: 2%;
+        bottom: 2%;
+        right: 5%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.hidden-on-pc {
+    visibility: visible;
+}
+
+@media screen and (min-width: 1024px) {
+    .hidden-on-pc {
+        visibility: collapse;
+    }
+}
+
+.hidden-on-mobile {
+    visibility: collapse;
+}
+
+@media screen and (min-width: 1024px) {
+    .hidden-on-mobile {
+        visibility: visible;
+    }
+}
+

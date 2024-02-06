@@ -6,8 +6,6 @@ let inIndex;
 function projectClicked(project) {
     if(gameSwitchingLocked) { return; }
 
-    
-
     if(inIndex) {
         for(let i = 0; i < projects.length; i++){
             if(projects[i] == project && activeProject != i) {
@@ -23,16 +21,49 @@ function projectClicked(project) {
             }
         }
     } else {
-
-        window.open("index.html#" + project.replace("-", "_"), "_self");
+        window.open("index#" + project.replace("-", "_"), "_self");
     }
 }
 
+function nextProject() {
+    let proj = activeProject;
+    proj += 1;
+    if(proj >= projects.length) {
+        proj = 0;
+    }
+    projectClicked(projects[proj]);
+}
+
+function previousProject() {
+    let proj = activeProject;
+    proj -= 1;
+    if(proj < 0) {
+        proj = projects.length - 1;
+    }
+    projectClicked(projects[proj]);
+}
+
 function projectsClicked() {
+    document.getElementById("main-menu-projects").classList.toggle("main-menu-projects-separator")
     for(let i = 0; i < document.getElementById("main-menu-projects").children.length; i++){
         document.getElementById("main-menu-projects").children[i].classList.toggle("main-menu-project-uncollapsed")
         document.getElementById("main-menu-projects").children[i].classList.toggle("main-menu-project-collapsed")
     }
+}
+
+function closeMenu() {
+    document.getElementById("index-main-menu").style.left = "-100%"
+    document.getElementById("index-main-menu").style.right = "100%"
+    document.getElementById("sandwich-container").style.left = "0px"
+    document.getElementById("sandwich-container").style.right = "0px"
+    
+}
+
+function openMenu() {
+    document.getElementById("index-main-menu").style.left = "0px"
+    document.getElementById("index-main-menu").style.right = "0px"
+    document.getElementById("sandwich-container").style.left = "100%"
+    document.getElementById("sandwich-container").style.right = "-100%"
 }
 
 window.onload = () => {

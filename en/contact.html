@@ -9,9 +9,14 @@
     </head>
 
     <body>
+        <!--Mobile sandwich menu-->
+        <div id="sandwich-container" class="sandwich-container">
+            <img onclick="openMenu()" class="sandwich-button clickable" src="../images/sandwich.png">
+        </div>
+
         <!--Menu-->
-        <div class="index-main-menu">
-            <h1 class="mg-font font-size-lg">Morphin' Games</h1>
+        <div id="index-main-menu" class="index-main-menu">
+            <h1 class="mg-title mg-font font-size-lg">Morphin' Games</h1>
             <p id="projects-dropdown" class="index-main-menu-link clickable" onclick="projectsClicked()">Projects</p>
             <div id="main-menu-projects" class="main-menu-projects">
                 <p class="main-menu-project-collapsed index-main-menu-link clickable" onclick="projectClicked('scale-tale')">Scale Tale</p>
@@ -19,8 +24,9 @@
                 <p class="main-menu-project-collapsed index-main-menu-link clickable" onclick="projectClicked('glass-jungle')">Glass Jungle</p>
                 <p class="main-menu-project-collapsed index-main-menu-link clickable" onclick="projectClicked('nightmare-run')">Nightmare Run</p>
             </div>
-            <p onclick="window.open('team.html', '_self')" class="index-main-menu-link clickable">Who we are</p>
-            <p onclick="window.open('contact.html', '_self')" class="index-main-menu-link clickable">Contact</p>
+            <p onclick="window.open('team', '_self')" class="index-main-menu-link clickable">Who we are</p>
+            <p onclick="window.open('contact', '_self')" class="index-main-menu-link clickable">Contact</p>
+            <p onclick="closeMenu()" class="index-main-menu-link clickable hidden-on-pc">X</p>
             <div class="auto-margin"></div>
             <div class="social-media-items">
                 <img onclick="window.open('https://www.youtube.com/@morphin_games', '_blank')" class="clickable social-media-icon" src="../images/social_media/youtube.png">
@@ -34,18 +40,20 @@
         </div>
 
         <!--Background video with current game displaying-->
-        <video id="background-video" class="background-video" autoplay muted loop>
-            <source id="video-source" src="../videos/office_placeholder.mp4" type="video/mp4">
-        </video>
+        <div class="video-center"></div>
+            <video id="background-video" class="background-video" autoplay muted loop>
+                <source id="video-source" src="../videos/office_placeholder.mp4" type="video/mp4">
+            </video>
+        </div>
         
         <!--Dark div-->
         <div id="dark-screen" class="dark-bg"></div>
 
         <div class="contact-info">
-            <h1 class="mg-font font-size-xl">Do you like what you see</h1>
+            <h1 class="mg-title mg-font font-size-xl">Do you like what you see</h1>
             <p class="font-size-sm">Send us an e-mail to: <a href="mailto:contact@morphingames.com">contact@morphingames.com</a></p>
             <p class="font-size-sm"> Or leave us a message in any of our accounts: </p>
-            <div class="social-media-items">
+            <div class="social-media-items-bg">
                 <img onclick="window.open('https://www.youtube.com/@morphin_games', '_blank')" class="clickable social-media-icon-bg" src="../images/social_media/youtube.png">
                 <img onclick="window.open('https://twitter.com/gamesmorphin', '_blank')" class="clickable social-media-icon-bg" src="../images/social_media/x.png">
                 <img onclick="window.open('https://www.tiktok.com/@morphin.games', '_blank')" class="clickable social-media-icon-bg" src="../images/social_media/tiktok.png">
