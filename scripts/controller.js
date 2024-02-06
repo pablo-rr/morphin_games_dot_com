@@ -3,6 +3,28 @@ let activeProject = 0;
 let projects = ["scale-tale", "nightmare-run", "glass-jungle", "robo-crack"];
 let inIndex;
 
+function tr(langTo) {
+    let urlSplit = window.location.href.split("/");
+    let langFrom = "/" + urlSplit[urlSplit.length - 2] + "/";
+
+    if(langTo == langFrom){ return; }
+
+    let urlEndFrom = urlSplit[urlSplit.length - 1].split(".")[0];
+    let trUrl = window.location.href.replace(langFrom, langTo);
+
+    if(urlEndFrom == "team") {
+        trUrl = trUrl.replace("team", "equipo");
+    } else if(urlEndFrom == "contact") {
+        trUrl = trUrl.replace("contact", "contacto");
+    } else if(urlEndFrom == "equipo") {
+        trUrl = trUrl.replace("equipo", "team");
+    } else if(urlEndFrom == "contacto") {
+        trUrl = trUrl.replace("contacto", "contact");
+    }
+
+    window.open(trUrl, "_self");
+}
+
 function projectClicked(project) {
     if(gameSwitchingLocked) { return; }
 

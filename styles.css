@@ -578,6 +578,7 @@ a:hover {
 }
 
 .social-media-items {
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -598,6 +599,43 @@ a:hover {
     column-gap: 50px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.flag-items {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.flag-icon {
+    height: 40px;
+    width: 60px;
+    transition: all 0.5s;
+}
+
+.flag-icon:hover {
+    height: 52px;
+    width: 78px;
+    margin-left: -6px;
+    margin-right: -6px;
+    margin-top: -9px;
+    margin-bottom: -9px;
+    transition: all 0.5s;
+}
+
+.social-media-icon {
+    width: 32px;
+    height: 32px;
+    transition: all 0.5s;
+}
+
+.social-media-icon:hover {
+    margin: -4px;
+    width: 40px;
+    height: 40px;
+    transition: all 0.5s;
 }
 
 @media screen and (min-width: 1024px) {

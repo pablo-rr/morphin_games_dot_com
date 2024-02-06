@@ -31,17 +31,21 @@
             <!--Menu-->
             <div id="index-main-menu" class="index-main-menu">
                 <h1 class="mg-title mg-font font-size-lg">Morphin' Games</h1>
-                <p id="projects-dropdown" class="index-main-menu-link clickable" onclick="projectsClicked()">Projects</p>
+                <p id="projects-dropdown" class="index-main-menu-link clickable" onclick="projectsClicked()">Proyectos</p>
                 <div id="main-menu-projects" class="main-menu-projects">
                     <p class="main-menu-project-collapsed index-main-menu-link clickable" onclick="projectClicked('scale-tale')">Scale Tale</p>
                     <p class="main-menu-project-collapsed index-main-menu-link clickable" onclick="projectClicked('robo-crack')">ROBO-CRACK</p>
                     <p class="main-menu-project-collapsed index-main-menu-link clickable" onclick="projectClicked('glass-jungle')">Glass Jungle</p>
                     <p class="main-menu-project-collapsed index-main-menu-link clickable" onclick="projectClicked('nightmare-run')">Nightmare Run</p>
                 </div>
-                <p onclick="window.open('team', '_self')" class="index-main-menu-link clickable">Who we are</p>
-                <p onclick="window.open('contact', '_self')" class="index-main-menu-link clickable">Contact</p>
+                <p onclick="window.open('equipo', '_self')" class="index-main-menu-link clickable">Quienes somos</p>
+                <p onclick="window.open('contacto', '_self')" class="index-main-menu-link clickable">Contacto</p>
                 <p onclick="closeMenu()" class="index-main-menu-link clickable hidden-on-pc">X</p>
                 <div class="auto-margin"></div>
+                <div class="flag-items">
+                    <img onclick="tr('/es/')" class="flag-icon clickable" src="../images/es.jpg">
+                    <img onclick="tr('/en/')" class="flag-icon clickable" src="../images/uk.jpg">
+                </div>
                 <div class="social-media-items">
                     <img onclick="window.open('https://www.youtube.com/@morphin_games', '_blank')" class="clickable social-media-icon" src="../images/social_media/youtube.png">
                     <img onclick="window.open('https://twitter.com/gamesmorphin', '_blank')" class="clickable social-media-icon" src="../images/social_media/x.png">
@@ -49,7 +53,7 @@
                     <img onclick="window.open('https://www.instagram.com/morphin_games/?igshid=MzRlODBiNWFlZA%3D%3D', '_blank')" class="clickable social-media-icon" src="../images/social_media/instagram.png">
                 </div>
                 <div class="credits">
-                    Morphin' Games © - All rights reserved
+                    Morphin' Games © - Todos los derechos reservados
                 </div>
             </div>
 
@@ -70,14 +74,14 @@
                 <!-- #############################################################################################  -->
                 <div id="scale-tale" class="game-container game-showing">
                     <h2 class="mg-font">Scale Tale</h2>
-                    <p>Gecko Elders proudly tell of their descent from Dragons, but fewer and fewer people believe these stories, including Endal.
+                    <p>Los ancianos Gecko cuentan con orgullo a sus descendientes su ascendencia de los Dragones, pero las nuevas generaciones ya no se creen esas viejas fábulas, incluyendo a Endal.
 
-                        However, after finding a mysterious giant Scale that gave him the power to resize the world around him, Endal decided to embark on an adventure in the search of its origin.
-                        
-                        Embark in an adventure of Great Scales and help Endal find the 5 Power Scales!
+                        Sin embargo, tras encontrar una mistoriosa Escama que le otorgó los poderes de redimensionar el mundo a su antojo, Endal ha decidido embarcarse en una aventura para descubrir la verdad.
+
+                        ¡Adéntrate en una aventura de épicas proporciones y ayuda a Endal a encontrar las cinco Escamas del Poder!
                     </p>
                     <div class="auto-margin"></div>
-                    <p>Get it now:</p>
+                    <p>Consiguelo ya:</p>
                     <div class="game-store-links">
                         <div onclick="window.open('https://morphingames.itch.io/scale-tale', '_blank')" class="store-btn itchio-background clickable">
                             <p class="platform-name">itch.io</p>
@@ -97,12 +101,12 @@
                 <!-- #############################################################################################  -->
                 <div id="robo-crack" class="game-container game-hidden">
                     <h2 class="mg-font">ROBO-CRACK</h2>
-                    <p>A long time ago, he was deactivated. Now, he's come back, and he will do anything to recharge his batteries.
+                    <p>Hace mucho tiempo, le desactivaron. Ahora ha vuelto, y hará lo que sea para recargar su batería.
 
-                        Play as ROBO-CRACK, an energy-addict robot that has to fight his way out of a factory to be finally free!
+                        ¡Juega como ROBO-CRACK, un robot adicto a la energía que tendrá que luchar para escapar de la fábrica que lo retiene!
                     </p>
                     <div class="auto-margin"></div>
-                    <p>Get it now:</p>
+                    <p>Consiguelo ya:</p>
                     <div class="game-store-links">
                         <div onclick="window.open('https://hp3d.itch.io/robo-crack', '_blank')" class="store-btn itchio-background clickable">
                             <p class="platform-name">itch.io</p>
@@ -116,12 +120,12 @@
                 <!-- #############################################################################################  -->
                 <div id="glass-jungle" class="game-container game-hidden">
                     <h2 class="mg-font">Glass Jungle</h2>
-                    <p>Welcome to Hollywood, where the main character has unlimited ammo and an evil guy wants to take over the world!
-                    
-                    You'll be interpreting McCliché in three spectacular action sequences of an 80's action movie that's filled with the most over-used tropes in cinema!
+                    <p>¡Bienvenido a Hollywood, donde los protagonistas nunca mueren y tienen cargadores ilimitados!
+
+                        ¡Interpretarás a McCliché en tres secciones de espectacular acción y adrenalina ochentera, plagadas de clichés y referencias del cine de la época!
                     </p>
                     <div class="auto-margin"></div>
-                    <p>Get it now:</p>
+                    <p>Consiguelo ya:</p>
                     <div class="game-store-links">
                         <div onclick="window.open('https://polanski.itch.io/glass-jungle', '_blank')" class="store-btn itchio-background clickable">
                             <p class="platform-name">itch.io</p>
@@ -135,12 +139,12 @@
                 <!-- #############################################################################################  -->
                 <div id="nightmare-run" class="game-container game-hidden">
                     <h2 class="mg-font">Nightmare Run</h2>
-                    <p>In a creepy cementery, a living rag doll is running for its life!
+                    <p>¡En un cementerio muy malrollero, un muñeco de trapo corre por su vida!
 
-                    Collect coins and get as far from Ripper Pipper as you can in this intense infinite runner!
+                        Recoje monedas y escapa todo lo que puedas de Ripper Pipper en este intenso Infinite Runner!
                     </p>
                     <div class="auto-margin"></div>
-                    <p>Get it now:</p>
+                    <p>Consiguelo ya:</p>
                     <div class="game-store-links">
                         <div onclick="window.open('https://morphingames.itch.io/nightmare-run', '_blank')" class="store-btn itchio-background clickable">
                             <p class="platform-name">itch.io</p>
