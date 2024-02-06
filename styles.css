@@ -101,7 +101,7 @@ a:hover {
 }
 
 .font-size-xl {
-    font-size: 64px;
+    font-size: 52px;
 }
 
 .font-size-xlg {
@@ -593,12 +593,20 @@ a:hover {
 .social-media-items-bg {
     display: grid;
     grid-template-columns: 40% 40%;
-    width: 100%;
     justify-content: center;
     row-gap: 20px;
     column-gap: 50px;
     margin-left: auto;
     margin-right: auto;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .social-media-items-bg {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
 
 .flag-items {
@@ -638,14 +646,6 @@ a:hover {
     transition: all 0.5s;
 }
 
-@media screen and (min-width: 1024px) {
-    .social-media-bg {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-}
-
 .social-media-icon {
     width: 32px;
     height: 32px;
@@ -660,23 +660,23 @@ a:hover {
 }
 
 .social-media-icon-bg {
-    width: 200px;
-    height: 200px;
+    width: 128px;
+    height: 128px;
     transition: all 0.5s;
 }
 
 @media screen and (min-width: 1024px) {
     .social-media-icon-bg {
-        width: 256px;
-        height: 256px;
+        width: 8vw;
+        height: 8vw;
         transition: all 0.5s;
     }
 }
 
 .social-media-icon-bg:hover {
-    margin: -16px;
-    width: 288px;
-    height: 288px;
+    margin: -1vw;
+    width: 10vw;
+    height: 10vw;
     transition: all 0.5s;
 }
 
