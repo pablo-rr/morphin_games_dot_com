@@ -23,7 +23,7 @@ function projectClicked(project) {
             }
         }
     } else {
-        window.open("en#" + project.replace("-", "_"), "_self");
+        window.open("index#" + project.replace("-", "_"), "_self");
     }
 
 }
@@ -72,7 +72,7 @@ function openMenu() {
 window.onload = () => {
     let split = window.location.href.split("/");
     let href = split[split.length - 1];
-    inIndex = href.split(".")[0] == "en" || split[split.length - 1] == "";
+    inIndex = href.split(".")[0] == "index" || split[split.length - 1] == "";
 
     if(!inIndex) { return; }
 
@@ -115,7 +115,7 @@ window.onload = () => {
         } else if(ev.target.classList.contains("black-bg")){
             document.getElementById("dark-screen").classList.toggle("dark-bg");
             document.getElementById("dark-screen").classList.toggle("black-bg");
-            document.getElementById("video-source").src = 'videos/' + projects[activeProject] + '.mp4'
+            document.getElementById("video-source").src = '../videos/' + projects[activeProject] + '.mp4'
             document.getElementById("background-video").load();
             document.getElementById("background-video").play();
         }

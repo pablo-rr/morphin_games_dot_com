@@ -1,0 +1,5 @@
+# robots.txt file of https://example.com/
+sitemap: https://sitemaps.example.com/sitemap.txt
+
+User-agent: *
+Disallow: /images/members/
