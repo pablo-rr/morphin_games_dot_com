@@ -95,14 +95,9 @@ function openMenu() {
 
 window.onload = () => {
     let split = window.location.href.split("/");
-    window.alert(split)
     let href = split[split.length - 1];
-    window.alert(href)
+    window.alert(href.split(".")[0].split("#")[0])
     inIndex = href.split(".")[0] == "index" || href.split(".")[0].split("#")[0] == "index" || split[split.length - 1] == "";
-
-    window.alert(inIndex)
-
-    window.alert(inIndex)
 
     if(!inIndex) { return; }
 
