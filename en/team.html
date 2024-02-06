@@ -15,166 +15,168 @@
     </head>
 
     <body>
-        <!--Mobile sandwich menu-->
-        <div id="sandwich-container" class="sandwich-container">
-            <img onclick="openMenu()" class="sandwich-button clickable" src="../images/sandwich.png">
-        </div>
-
-        <!--Menu-->
-        <div id="index-main-menu" class="index-main-menu">
-            <h1 class="mg-title mg-font font-size-lg">Morphin' Games</h1>
-            <p id="projects-dropdown" class="index-main-menu-link clickable" onclick="projectsClicked()">Projects</p>
-            <div id="main-menu-projects" class="main-menu-projects">
-                <p class="main-menu-project-collapsed index-main-menu-link clickable" onclick="projectClicked('scale-tale')">Scale Tale</p>
-                <p class="main-menu-project-collapsed index-main-menu-link clickable" onclick="projectClicked('robo-crack')">ROBO-CRACK</p>
-                <p class="main-menu-project-collapsed index-main-menu-link clickable" onclick="projectClicked('glass-jungle')">Glass Jungle</p>
-                <p class="main-menu-project-collapsed index-main-menu-link clickable" onclick="projectClicked('nightmare-run')">Nightmare Run</p>
-            </div>
-            <p onclick="window.open('team', '_self')" class="index-main-menu-link clickable">Who we are</p>
-            <p onclick="window.open('contact', '_self')" class="index-main-menu-link clickable">Contact</p>
-            <p onclick="closeMenu()" class="index-main-menu-link clickable hidden-on-pc">X</p>
-            <div class="auto-margin"></div>
-            <div class="social-media-items">
-                <img onclick="window.open('https://www.youtube.com/@morphin_games', '_blank')" class="clickable social-media-icon" src="../images/social_media/youtube.png">
-                <img onclick="window.open('https://twitter.com/gamesmorphin', '_blank')" class="clickable social-media-icon" src="../images/social_media/x.png">
-                <img onclick="window.open('https://www.tiktok.com/@morphin.games', '_blank')" class="clickable social-media-icon" src="../images/social_media/tiktok.png">
-                <img onclick="window.open('https://www.instagram.com/morphin_games/?igshid=MzRlODBiNWFlZA%3D%3D', '_blank')" class="clickable social-media-icon" src="../images/social_media/instagram.png">
-            </div>
-            <div class="credits">
-                Morphin' Games © - All rights reserved
-            </div>
-        </div>
-
-        <!--Background video with current game displaying-->
-        <div class="video-center"></div>
-            <video id="background-video" class="background-video" autoplay muted loop>
-                <source id="video-source" src="../videos/office_placeholder.mp4" type="video/mp4">
-            </video>
-        </div>
-        
-        <!--Dark div-->
-        <div id="dark-screen" class="dark-bg"></div>
-
-        <div class="team-full-info">
-            <div class="morphin-story">
-                <h2 class="mg-title mg-font font-size-xl">Self made developers</h2>
-                <p class="font-size-sm">Morphin' Games was originally founded the 1st of November of 2022 as a project of three video game development students, but as time passes, the team grows both in members and experience.</p>
+        <div class="wrapper">
+            <!--Mobile sandwich menu-->
+            <div id="sandwich-container" class="sandwich-container">
+                <img onclick="openMenu()" class="sandwich-button clickable" src="../images/sandwich.png">
             </div>
 
-            <p class="font-size-lg">Meet the team:</p>
-            <div class="team-members">
-                <div class="team-col">
-                    <div class="team-member">
-                        <img class="team-member-image" src="../images/members/placeholder.png">
-                        <div class="team-member-info">
-                            <p class="team-member-name mg-font">Ricardo Monforte</p>
-                            <div class="team-member-roles font-size-xs">
-                                <p class="team-member-role">Founder</p>
-                                <p class="team-member-role">Lead 3D Artist</p>
-                                <p class="team-member-role">Game Producer</p>
-                                <p class="team-member-role">Game Designer</p>
-                                <p class="team-member-role">Level Designer</p>
-                            </div>
-                        </div>
-                    </div>
+            <!--Menu-->
+            <div id="index-main-menu" class="index-main-menu">
+                <h1 class="mg-title mg-font font-size-lg">Morphin' Games</h1>
+                <p id="projects-dropdown" class="index-main-menu-link clickable" onclick="projectsClicked()">Projects</p>
+                <div id="main-menu-projects" class="main-menu-projects">
+                    <p class="main-menu-project-collapsed index-main-menu-link clickable" onclick="projectClicked('scale-tale')">Scale Tale</p>
+                    <p class="main-menu-project-collapsed index-main-menu-link clickable" onclick="projectClicked('robo-crack')">ROBO-CRACK</p>
+                    <p class="main-menu-project-collapsed index-main-menu-link clickable" onclick="projectClicked('glass-jungle')">Glass Jungle</p>
+                    <p class="main-menu-project-collapsed index-main-menu-link clickable" onclick="projectClicked('nightmare-run')">Nightmare Run</p>
+                </div>
+                <p onclick="window.open('team', '_self')" class="index-main-menu-link clickable">Who we are</p>
+                <p onclick="window.open('contact', '_self')" class="index-main-menu-link clickable">Contact</p>
+                <p onclick="closeMenu()" class="index-main-menu-link clickable hidden-on-pc">X</p>
+                <div class="auto-margin"></div>
+                <div class="social-media-items">
+                    <img onclick="window.open('https://www.youtube.com/@morphin_games', '_blank')" class="clickable social-media-icon" src="../images/social_media/youtube.png">
+                    <img onclick="window.open('https://twitter.com/gamesmorphin', '_blank')" class="clickable social-media-icon" src="../images/social_media/x.png">
+                    <img onclick="window.open('https://www.tiktok.com/@morphin.games', '_blank')" class="clickable social-media-icon" src="../images/social_media/tiktok.png">
+                    <img onclick="window.open('https://www.instagram.com/morphin_games/?igshid=MzRlODBiNWFlZA%3D%3D', '_blank')" class="clickable social-media-icon" src="../images/social_media/instagram.png">
+                </div>
+                <div class="credits">
+                    Morphin' Games © - All rights reserved
+                </div>
+            </div>
 
-                    <div class="team-member">
-                        <img class="team-member-image" src="../images/members/placeholder.png">
-                        <div class="team-member-info">
-                            <p class="team-member-name mg-font">Pablo Romero</p>
-                            <div class="team-member-roles font-size-xs">
-                                <p class="team-member-role">Founder</p>
-                                <p class="team-member-role">Lead Programmer</p>
-                                <p class="team-member-role">Game Producer</p>
-                                <p class="team-member-role">Game Designer</p>
-                                <p class="team-member-role">Level Designer</p>
-                            </div>
-                        </div>
-                    </div>
+            <!--Background video with current game displaying-->
+            <div class="video-center"></div>
+                <video id="background-video" class="background-video" autoplay muted loop>
+                    <source id="video-source" src="../videos/office_placeholder.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+            <!--Dark div-->
+            <div id="dark-screen" class="dark-bg"></div>
 
-                    <div class="team-member">
-                        <img class="team-member-image" src="../images/members/placeholder.png">
-                        <div class="team-member-info">
-                            <p class="team-member-name mg-font">Hristian Petkov</p>
-                            <div class="team-member-roles">
-                                <p class="team-member-role">Founder</p>
-                                <p class="team-member-role">Lead 3D Artist</p>
-                                <p class="team-member-role">Game Producer</p>
-                                <p class="team-member-role">Game Designer</p>
-                                <p class="team-member-role">Level Designer</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="team-full-info">
+                <div class="morphin-story">
+                    <h2 class="mg-title mg-font font-size-xl">Self made developers</h2>
+                    <p class="font-size-sm">Morphin' Games was originally founded the 1st of November of 2022 as a project of three video game development students, but as time passes, the team grows both in members and experience.</p>
                 </div>
 
-                <div class="team-col">
-                    <div class="team-member">
-                        <img class="team-member-image" src="../images/members/placeholder.png">
-                        <div class="team-member-info">
-                            <p class="team-member-name mg-font">Selene Gonzalo</p>
-                            <div class="team-member-roles font-size-xs">
-                                <p class="team-member-role">Quality Assurance</p>
+                <p class="font-size-lg">Meet the team:</p>
+                <div class="team-members">
+                    <div class="team-col">
+                        <div class="team-member">
+                            <img class="team-member-image" src="../images/members/placeholder.png">
+                            <div class="team-member-info">
+                                <p class="team-member-name mg-font">Ricardo Monforte</p>
+                                <div class="team-member-roles font-size-xs">
+                                    <p class="team-member-role">Founder</p>
+                                    <p class="team-member-role">Lead 3D Artist</p>
+                                    <p class="team-member-role">Game Producer</p>
+                                    <p class="team-member-role">Game Designer</p>
+                                    <p class="team-member-role">Level Designer</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="team-member">
+                            <img class="team-member-image" src="../images/members/placeholder.png">
+                            <div class="team-member-info">
+                                <p class="team-member-name mg-font">Pablo Romero</p>
+                                <div class="team-member-roles font-size-xs">
+                                    <p class="team-member-role">Founder</p>
+                                    <p class="team-member-role">Lead Programmer</p>
+                                    <p class="team-member-role">Game Producer</p>
+                                    <p class="team-member-role">Game Designer</p>
+                                    <p class="team-member-role">Level Designer</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="team-member">
+                            <img class="team-member-image" src="../images/members/placeholder.png">
+                            <div class="team-member-info">
+                                <p class="team-member-name mg-font">Hristian Petkov</p>
+                                <div class="team-member-roles">
+                                    <p class="team-member-role">Founder</p>
+                                    <p class="team-member-role">Lead 3D Artist</p>
+                                    <p class="team-member-role">Game Producer</p>
+                                    <p class="team-member-role">Game Designer</p>
+                                    <p class="team-member-role">Level Designer</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="team-member">
-                        <img class="team-member-image" src="../images/members/placeholder.png">
-                        <div class="team-member-info">
-                            <p class="team-member-name mg-font">Saul España</p>
-                            <div class="team-member-roles font-size-xs">
-                                <p class="team-member-role">Lead Music Composer</p>
-                                <p class="team-member-role">Lead SFX Designer</p>
-                                <p class="team-member-role">Programmer</p>
-                                <p class="team-member-role">Game Designer</p>
-                                <p class="team-member-role">Level Designer</p>
+                    <div class="team-col">
+                        <div class="team-member">
+                            <img class="team-member-image" src="../images/members/placeholder.png">
+                            <div class="team-member-info">
+                                <p class="team-member-name mg-font">Selene Gonzalo</p>
+                                <div class="team-member-roles font-size-xs">
+                                    <p class="team-member-role">Quality Assurance</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="team-member">
+                            <img class="team-member-image" src="../images/members/placeholder.png">
+                            <div class="team-member-info">
+                                <p class="team-member-name mg-font">Saul España</p>
+                                <div class="team-member-roles font-size-xs">
+                                    <p class="team-member-role">Lead Music Composer</p>
+                                    <p class="team-member-role">Lead SFX Designer</p>
+                                    <p class="team-member-role">Programmer</p>
+                                    <p class="team-member-role">Game Designer</p>
+                                    <p class="team-member-role">Level Designer</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="team-member">
+                            <img class="team-member-image" src="../images/members/placeholder.png">
+                            <div class="team-member-info">
+                                <p class="team-member-name mg-font">Hector Lasanta</p>
+                                <div class="team-member-roles">
+                                    <p class="team-member-role">Lead Writter</p>
+                                    <p class="team-member-role">Quality Assurance</p>
+                                    <p class="team-member-role">Game Designer</p>
+                                    <p class="team-member-role">Level Designer</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="team-member">
-                        <img class="team-member-image" src="../images/members/placeholder.png">
-                        <div class="team-member-info">
-                            <p class="team-member-name mg-font">Hector Lasanta</p>
-                            <div class="team-member-roles">
-                                <p class="team-member-role">Lead Writter</p>
-                                <p class="team-member-role">Quality Assurance</p>
-                                <p class="team-member-role">Game Designer</p>
-                                <p class="team-member-role">Level Designer</p>
+                    <div class="team-col">
+                        <div class="team-member">
+                            <img class="team-member-image" src="../images/members/placeholder.png">
+                            <div class="team-member-info">
+                                <p class="team-member-name mg-font">Jorge Martinez</p>
+                                <div class="team-member-roles font-size-xs">
+                                    <p class="team-member-role">3D Artist</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="team-col">
-                    <div class="team-member">
-                        <img class="team-member-image" src="../images/members/placeholder.png">
-                        <div class="team-member-info">
-                            <p class="team-member-name mg-font">Jorge Martinez</p>
-                            <div class="team-member-roles font-size-xs">
-                                <p class="team-member-role">3D Artist</p>
+                        <div class="team-member">
+                            <img class="team-member-image" src="../images/members/placeholder.png">
+                            <div class="team-member-info">
+                                <p class="team-member-name mg-font">Alex Rubio</p>
+                                <div class="team-member-roles font-size-xs">
+                                    <p class="team-member-role">Lead Conceptual Artist</p>
+                                    <p class="team-member-role">Lead 2D Designer</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="team-member">
-                        <img class="team-member-image" src="../images/members/placeholder.png">
-                        <div class="team-member-info">
-                            <p class="team-member-name mg-font">Alex Rubio</p>
-                            <div class="team-member-roles font-size-xs">
-                                <p class="team-member-role">Lead Conceptual Artist</p>
-                                <p class="team-member-role">Lead 2D Designer</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="team-member">
-                        <img class="team-member-image" src="../images/members/placeholder.png">
-                        <div class="team-member-info">
-                            <p class="team-member-name mg-font">Elna Maspoch</p>
-                            <div class="team-member-roles">
-                                <p class="team-member-role">Conceptual Artist</p>
-                                <p class="team-member-role">2D Designer</p>
+                        <div class="team-member">
+                            <img class="team-member-image" src="../images/members/placeholder.png">
+                            <div class="team-member-info">
+                                <p class="team-member-name mg-font">Elna Maspoch</p>
+                                <div class="team-member-roles">
+                                    <p class="team-member-role">Conceptual Artist</p>
+                                    <p class="team-member-role">2D Designer</p>
+                                </div>
                             </div>
                         </div>
                     </div>
