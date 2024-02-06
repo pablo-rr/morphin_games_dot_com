@@ -102,6 +102,8 @@ window.onload = () => {
 
     window.alert(inIndex)
 
+    window.alert(inIndex)
+
     if(!inIndex) { return; }
 
     if(window.location.href.split("#").length > 1){
