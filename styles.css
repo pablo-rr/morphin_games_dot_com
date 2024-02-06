@@ -497,7 +497,7 @@ a:hover {
 @media screen and (min-width: 1024px) {
     .team-full-info {
         position: absolute;
-        left: 25%;
+        left: 35%;
         top: 2%;
         bottom: 2%;
         right: 5%;
@@ -705,7 +705,7 @@ a:hover {
 @media screen and (min-width: 1024px) {
     .contact-info {
         position: absolute;
-        left: 25%;
+        left: 35%;
         top: 2%;
         bottom: 2%;
         right: 5%;
