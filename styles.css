@@ -28,18 +28,6 @@ body {
     font-family: Roboto;
 }
 
-@media only screen and (min-width: 768px) {
-    body {
-        background-color: black;
-        padding: 0px;
-        margin: 0px;
-        overflow-y: hidden;
-        overflow-x: hidden;
-        color: rgb(255, 255, 255);
-        font-family: Roboto;
-    }
-}
-
 a {
     padding: 0px;
     margin: 0px;
@@ -86,23 +74,10 @@ a {
     left: 0px;
     top: 0px;
     bottom: 0px;
-    right: 0px;
-    background-color: rgb(255, 255, 255);
-}
-
-@media only screen and (min-width: 768px) {
-    .index-main-menu {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        left: 0px;
-        top: 0px;
-        bottom: 0px;
-        padding: 50px;
-        padding-right: 50px;
-        background: linear-gradient(90deg, rgb(0, 0, 0) 95%, rgba(255, 255, 255, 0) 100%);
-        /*background-color: rgb(0, 0, 0);*/
-    }
+    padding: 50px;
+    padding-right: 50px;
+    background: linear-gradient(90deg, rgb(0, 0, 0) 95%, rgba(255, 255, 255, 0) 100%);
+    /*background-color: rgb(0, 0, 0);*/
 }
 
 .index-main-menu-link {
