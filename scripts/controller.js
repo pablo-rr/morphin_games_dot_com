@@ -69,7 +69,7 @@ function openMenu() {
 window.onload = () => {
     let split = window.location.href.split("/");
     let href = split[split.length - 1];
-    inIndex = href.split(".")[0] == "index";
+    inIndex = href.split(".")[0] == "index" || split[split.length - 1] == "";
 
     if(!inIndex) { return; }
 
